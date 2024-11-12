@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca de Plantas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to bottom, #a8e6cf, #dcedc1, #ffe0b2, #ffab91);
+            color: #333;
+            font-size: 18px; /* Aumentando o tamanho da fonte */
+        }
+        h1 {
+            text-align: center;
+            color: #4a4a4a;
+            font-size: 24px; /* Aumentando o tamanho do título */
+        }
+        .plant-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .plant-item {
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin: 5px 0;
+            background-color: #ffffff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-size: 18px; /* Aumentando o tamanho da fonte dos itens */
+        }
+        .plant-item:hover {
+            background-color: #f0f0f0;
+        }
+        .plant-info {
+            display: none;
+            margin-top: 5px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #e9e9e9;
+            border-radius: 5px;
+            font-size: 16px; /* Ajustando o tamanho da fonte das informações */
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px; /* Espaçamento para o rodapé */
+            font-size: 16px; /* Aumentando o tamanho da fonte do rodapé */
+        }
+    </style>
+</head>
+<body>
+
+    <footer>
+        Biblioteca de Plantas, Cogumelos e Ervas - Todos os direitos reservados
+    </footer>
+
+    <h1>Biblioteca de Plantas, Cogumelos e Ervas</h1>
+    <ul class="plant-list">
+        <!-- Plantas -->
+        <li class="plant-item" onclick="toggleInfo('aloe', this)">Aloe Vera</li>
+        <div id="aloe" class="plant-info">Aloe Vera: Uma planta suculenta famosa por suas propriedades medicinais, é frequentemente utilizada em produtos de cuidados com a pele.</div>
+        
+        <li class="plant-item" onclick="toggleInfo('bambu', this)">Bambu</li>
+        <div id="bambu" class="plant-info">Bambu: Uma planta de crescimento rápido e resistente, usada em construção e decoração.</div>
+        
+        <li class="plant-item" onclick="toggleInfo('cacto', this)">Cacto</li>
+        <div id="cacto" class="plant-info">Cacto: Plantas adaptadas a ambientes áridos, com uma variedade incrível de formas e tamanhos.</div>
+        
+        <li class="plant-item" onclick="toggleInfo('orquidea', this)">Orquídea</li>
+        <div id="orquidea" class="plant-info">Orquídea: Conhecida por suas flores exóticas e beleza, requer cuidados especiais.</div>
+        
+        <li class="plant-item" onclick="toggleInfo('samambaia', this)">Samambaia</li>
+        <div id="samambaia" class="plant-info">Samambaia: Uma planta ornamental popular que prefere ambientes úmidos e sombreados.</div>
+        
+        <li class="plant-item" onclick="toggleInfo('lavanda', this)">Lavanda</li>
+        <div id="lavanda" class="plant-info">Lavanda: Uma planta aromática famosa por seu perfume, utilizada em aromaterapia e culinária.</div>
+        
+        <li class="plant-item" onclick="toggleInfo('rosas', this)">Rosas</li>
+        <div id="rosas" class="plant-info">Rosas: Flores clássicas, símbolo de amor e beleza, há uma grande variedade de espécies.</div>
+        
+        <li class="plant-item" onclick="toggleInfo('suculenta', this)">Suculenta</li>
+        <div id="suculenta" class="plant-info">Suculenta: Plantas que armazenam água em seus tecidos, são fáceis de cuidar e vêm em muitas formas.</div>
+        
+        <li class="plant-item" onclick="toggleInfo('girassol', this)">Girassol</li>
+        <div id="girassol" class="plant-info">Girassol: Uma planta alta e vibrante que segue o sol, conhecida por suas grandes flores amarelas.</div>
+        
+        <li class="plant-item" onclick="toggleInfo('ficus', this)">Ficus</li>
+        <div id="ficus" class="plant-info">Ficus: Um gênero de plantas que inclui muitas variedades populares de plantas de casa.</div>
+
+        <!-- Cogumelos -->
+        <li class="plant-item" onclick="toggleInfo('shiitake', this)">Shiitake</li>
+        <div id="shiitake" class="plant-info">Shiitake: Um cogumelo comestível, muito utilizado na culinária asiática, conhecido por seu sabor rico.</div>
+        
+        <li class="plant-item" onclick="toggleInfo('portobello', this)">Portobello</li>
+        <div id="portobello" class="plant-info">Portobello: Um cogumelo grande e saboroso, ideal para grelhar ou assar.</div>
+        
+        <li class="plant-item" onclick="toggleInfo('champignon', this)">Champignon</li>
+        <div id="champignon" class="plant-info">Champignon: Um cogumelo comum na culinária, apreciado por seu sabor suave e versatilidade.</div>
+        
+        <li class="plant-item" onclick="toggleInfo('cogumelo-do-sol', this)">Cogumelo do Sol</li>
+        <div id="cogumelo-do-sol" class="plant-info">Cogumelo do Sol: Conhecido por suas propriedades nutricionais e sabor único, é bastante utilizado na culinária brasileira.</div>
+
+        <!-- Ervas Medicinais -->
+        <li class="plant-item" onclick="toggleInfo('camomila', this)">Camomila</li>
+        <div id="camomila" class="plant-info">Camomila: Uma erva medicinal famosa por suas propriedades calmantes e anti-inflamatórias.</div>
+        
+        <li class="plant-item" onclick="toggleInfo('hortela', this)">Hortelã</li>
+        <div id="hortela" class="plant-info">Hortelã: Uma erva aromática usada em chás e na culinária, conhecida por seu frescor.</div>
+        
+        <li class="plant-item" onclick="toggleInfo('alecrim', this)">Alecrim</li>
+        <div id="alecrim" class="plant-info">Alecrim: Uma erva aromática popular em pratos mediterrâneos, com propriedades antioxidantes.</div>
+        
+        <li class="plant-item" onclick="toggleInfo('gengibre', this)">Gengibre</li>
+        <div id="gengibre" class="plant-info">Gengibre: Uma raiz com propriedades anti-inflamatórias e digestivas, muito utilizada na culinária e na medicina natural.</div>
+        
+        <li class="plant-item" onclick="toggleInfo('aloe-vera', this)">Aloe Vera (Erva Medicinal)</li>
+        <div id="aloe-vera" class="plant-info">Aloe Vera: Além de ser uma planta suculenta, suas folhas têm propriedades medicinais e são usadas em tratamentos de pele.</div>
+
+        <!-- Plantas Comestíveis -->
+        <li class="plant-item" onclick="toggleInfo('manjericao', this)">Manjericão</li>
+        <div id="manjericao" class="plant-info">Manjericão: Uma erva aromática essencial na culinária italiana, especialmente em molhos e saladas.</div>
+        
+        <li class="plant-item" onclick="toggleInfo('salsa', this)">Salsa</li>
+        <div id="salsa" class="plant-info">Salsa: Uma erva versátil usada em diversas receitas, rica em vitaminas e minerais.</div>
+        
+        <li class="plant-item" onclick="toggleInfo('cebolinha', this)">Cebolinha</li>
+        <div id="cebolinha" class="plant-info">Cebolinha: Uma erva saborosa utilizada para temperar pratos e saladas, rica em nutrientes.</div>
+        
+        <li class="plant-item" onclick="toggleInfo('tomate', this)">Tomate</li>
+        <div id="tomate" class="plant-info">Tomate: Um fruto popular na culinária, rico em licopeno e utilizado em diversas receitas.</div>
+        
+        <li class="plant-item" onclick="toggleInfo('pimenta', this)">Pimenta</li>
+        <div id="pimenta" class="plant-info">Pimenta: Usada para adicionar sabor e calor aos pratos, com várias variedades disponíveis.</div>
+    </ul>
+
+    <script>
+        function toggleInfo(plantId, element) {
+            const infoDiv = document.getElementById(plantId);
+            infoDiv.style.display = infoDiv.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+
+</body>
+</html>
